@@ -12,17 +12,14 @@ Plugin 'gmarik/Vundle.vim'
 
 " Plugins
 Plugin 'kien/ctrlp.vim'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'tpope/vim-surround'
+" Plugin 'nathanaelkane/vim-indent-guides'
+" Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-airline'
-
-" JS Plugins
 Plugin 'jelera/vim-javascript-syntax'
-Plugin 'pangloss/vim-javascript'
-Plugin 'moll/vim-node'
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " Typescript
 Plugin 'leafgarland/typescript-vim'
@@ -44,6 +41,12 @@ set number                      " Line numbers on
 set expandtab                   " Tabs are spaces, not tabs
 set tabstop=2                   " An indentation every four columns
 
+" Disable backup and swap files
+set nobackup
+set noswapfile
+
+" Set <LEADER> key to ,
+let mapleader=","
 
 " Enable syntax highlighting
 syntax on
@@ -56,18 +59,37 @@ set ignorecase
 " Show the filename in the window titlebar
 set title
 
-" ctrlp configs
+" Ctrlp configs
 " no scanning of files and dirs in gitignore
 let g:ctrlp_user_command = 'find %s -type f | grep -v "`cat .gitignore`"'
 
 " Nerdtree config
 map <C-e> :NERDTreeToggle<CR>
 
+" Aurocorrect html
+let g:sparkupExecuteMapping = '<C-a>'
+
 " Airline config
 set laststatus=2
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline_theme='base16'
+
+" Fugitive config
+map <leader>gs :Gstatus
+map <leader>gd :Gdiff
+map <leader>gc :Gcommit
+map <leader>gb :Gblame
+map <leader>gl :Glog
+map <leader>gp :Git push
+
+" Close brackets after opening them
+ino " ""<left>
+ino ' ''<left>
+ino ( ()<left>
+ino [ []<left>
+ino { {}<left>
+ino {<CR> {<CR>}<ESC>O
 
 " Make sure that copy and paste uses the clipboard register
 "vmap <C-c> "+y
