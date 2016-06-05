@@ -56,6 +56,10 @@ set ignorecase
 " Show the filename in the window titlebar
 set title
 
+" ctrlp configs
+" no scanning of files and dirs in gitignore
+let g:ctrlp_user_command = 'find %s -type f | grep -v "`cat .gitignore`"'
+
 " Nerdtree config
 map <C-e> :NERDTreeToggle<CR>
 
