@@ -40,6 +40,7 @@ filetype plugin indent on    " required
 set number                      " Line numbers on
 set expandtab                   " Tabs are spaces, not tabs
 set tabstop=2                   " An indentation every four columns
+set backspace=2                 " make backspace work like most other apps
 
 " Disable backup and swap files
 set nobackup
@@ -73,7 +74,7 @@ let g:sparkupExecuteMapping = '<C-a>'
 set laststatus=2
 let g:airline_left_sep=''
 let g:airline_right_sep=''
-let g:airline_theme='base16'
+" let g:airline_theme='base16'
 
 " Fugitive config
 map <leader>gs :Gstatus
