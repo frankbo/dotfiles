@@ -20,6 +20,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-airline'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'fatih/vim-go'
 
 " Typescript
 Plugin 'leafgarland/typescript-vim'
