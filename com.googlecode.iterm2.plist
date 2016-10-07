@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>AboutToPasteTabsWithCancel</key>
-	<true/>
-	<key>AboutToPasteTabsWithCancel_selection</key>
-	<integer>0</integer>
 	<key>AdjustWindowForFontSizeChange</key>
 	<true/>
 	<key>AllowClipboardAccess</key>
@@ -722,9 +718,11 @@
 	<key>NSColorPanelMode</key>
 	<string>5</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Code/dotfiles</string>
+	<string>/Applications</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
+	<key>NSNavPanelExpandedSizeForSaveMode</key>
+	<string>{712, 521}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -769,11 +767,15 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>758 145 445 247 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>458 342 606 456 0 0 1440 877 </string>
+	<string>458 400 606 456 0 0 1440 877 </string>
+	<key>NSWindow Frame SessionsPreferences</key>
+	<string>269 139 606 456 0 0 1440 877 </string>
+	<key>NSWindow Frame SharedPreferences</key>
+	<string>204 272 796 473 0 0 1440 877 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 293 592 584 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 6 1440 871 0 0 1440 877 </string>
+	<string>0 4 1440 873 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>183 68 570 451 0 0 1440 878 </string>
 	<key>New Bookmarks</key>
@@ -955,7 +957,7 @@
 			<key>Blur</key>
 			<true/>
 			<key>Blur Radius</key>
-			<real>7.050623893737793</real>
+			<real>12.32842548076923</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -1330,6 +1332,8 @@
 			<true/>
 			<key>Normal Font</key>
 			<string>Menlo-Regular 14</string>
+			<key>Only The Default BG Color Uses Transparency</key>
+			<false/>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1337,7 +1341,7 @@
 			<key>Right Option Key Sends</key>
 			<integer>0</integer>
 			<key>Rows</key>
-			<integer>110</integer>
+			<integer>120</integer>
 			<key>Screen</key>
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
@@ -1483,7 +1487,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.15762759745121002</real>
+			<real>0.0</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unlimited Scrollback</key>
@@ -1503,27 +1507,38 @@
 			<key>Window Type</key>
 			<integer>2</integer>
 			<key>Working Directory</key>
-			<string>/Users/frank</string>
+			<string>/Users/frank/</string>
 		</dict>
 	</array>
-	<key>NoSyncDoNotWarnBeforeMultilinePaste</key>
-	<true/>
-	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
-	<integer>0</integer>
 	<key>NoSyncHaveShownPromoWithId_4</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>1EDCFF03-DFE2-4636-93AE-41DF131B14A0</string>
+	<string>6555139A-3149-4F71-9EE2-8237F1BB833A</string>
+	<key>NoSyncLastTipTime</key>
+	<real>487151601.15134197</real>
+	<key>NoSyncNeverAskAboutSettingAlternateMouseScroll</key>
+	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
+	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
+	<integer>0</integer>
 	<key>NoSyncPermissionToShowTip</key>
-	<false/>
+	<true/>
 	<key>NoSyncSuppressAnnyoingBellOffer</key>
 	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>486819796.77227098</real>
+	<real>486669457.35832202</real>
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>477520340.49772501</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>486760330.29026902</real>
+	<real>486669441.68142903</real>
+	<key>NoSyncTipsDisabled</key>
+	<true/>
+	<key>NoSyncTipsToNotShow</key>
+	<array>
+		<string>000</string>
+		<string>0000</string>
+	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1532,6 +1547,8 @@
 	<false/>
 	<key>OpenTmuxWindowsIn</key>
 	<integer>0</integer>
+	<key>PMPrintingExpandedStateForPrint2</key>
+	<false/>
 	<key>PassOnControlClick</key>
 	<false/>
 	<key>PasteFromClipboard</key>
@@ -1570,7 +1587,9 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/frank/Code/dotfiles</string>
+	<string>/Users/437488/Code/dotfiles</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>PromptOnQuit</key>
 	<true/>
 	<key>QuitWhenAllWindowsClosed</key>
@@ -1586,11 +1605,11 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing.xml?shard=35</string>
+	<string>https://iterm2.com/appcasts/testing.xml?shard=16</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-07-27T18:57:01Z</date>
+	<date>2016-10-06T13:00:26Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1600,7 +1619,7 @@
 	<key>SmartPlacement</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
-	<real>0.40000000596046448</real>
+	<real>0.40212841140918243</real>
 	<key>SwitchTabModifier</key>
 	<integer>4</integer>
 	<key>SwitchWindowModifier</key>
@@ -1638,6 +1657,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.0</string>
+	<string>3.0.10</string>
 </dict>
 </plist>
