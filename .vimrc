@@ -68,7 +68,7 @@ set title
 let g:ctrlp_user_command = 'find %s -type f | grep -v "`cat .gitignore`"'
 
 " Nerdtree config
-map <C-e> :NERDTreeToggle<CR>
+map <LEADER>e :NERDTreeToggle<CR>
 
 " Aurocorrect html
 let g:sparkupExecuteMapping = '<C-a>'
