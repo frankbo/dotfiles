@@ -21,7 +21,7 @@ Plugin 'bling/vim-airline'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'fatih/vim-go'
-Plugin 'jdkanani/vim-material-theme'
+Plugin 'lifepillar/vim-solarized8'
 
 " Typescript
 Plugin 'leafgarland/typescript-vim'
@@ -54,7 +54,7 @@ let mapleader=","
 " Enable syntax highlighting
 syntax on
 set background=dark
-colorscheme material-theme
+colorscheme solarized8_dark_low
 
 " Highlight searches
 set hlsearch
