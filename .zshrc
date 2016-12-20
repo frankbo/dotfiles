@@ -45,13 +45,14 @@ ZSH_THEME="gentoo"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git, vi-mode)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+# -------- programs not found on linux with this line enabled. On OSX it works fine.
+# export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
