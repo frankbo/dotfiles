@@ -80,5 +80,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+# Set nix environment on every start.
+if [ -e /Users/frank/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/frank/.nix-profile/etc/profile.d/nix.sh; fi
+
 alias pi="ssh pi@192.168.178.39 -t tmux a" 
 alias mvim="/usr/local/bin/mvim" 
