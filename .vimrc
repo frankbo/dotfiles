@@ -1,6 +1,6 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
-
+   
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -22,6 +22,11 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'fatih/vim-go'
 Plugin 'lifepillar/vim-solarized8'
+Plugin 'liuchengxu/space-vim-dark'
+
+" Haskell
+Plugin 'eagletmt/ghcmod-vim'
+Plugin 'lukerandall/haskellmode-vim'
 
 " Typescript
 Plugin 'leafgarland/typescript-vim'
@@ -53,8 +58,9 @@ let mapleader=","
 
 " Enable syntax highlighting
 syntax on
+
 set background=dark
-colorscheme solarized8_dark_low
+colorscheme space-vim-dark
 
 " Highlight searches
 set hlsearch
@@ -87,23 +93,10 @@ map <leader>gb :Gblame
 map <leader>gl :Glog
 map <leader>gp :Git push
 
-" Close brackets after opening them
-ino " ""<left>
-ino ' ''<left>
-ino ( ()<left>
-ino [ []<left>
-ino { {}<left>
-ino {<CR> {<CR>}<ESC>O
-
 " Make sure that copy and paste uses the clipboard register
 "vmap <C-c> "+y
 "imap <C-c> <Esc><Leader>p<Esc>"+y
 set clipboard=unnamed
 if has('unnamedplus')
-  set clipboard=unnamed,unnamedplus
+  set clipboard=unnamedplus
 endif
-
-" For terminal vim + iterm2 we need to explicitly configure the cursor "
-" for both insert mode as well as other modes "
-" let &t_SI = '\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\'
-" let &t_EI = '\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\'
