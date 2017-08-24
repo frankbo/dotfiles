@@ -83,5 +83,7 @@ source $ZSH/oh-my-zsh.sh
 # Set nix environment on every start.
 if [ -e /Users/frank/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/frank/.nix-profile/etc/profile.d/nix.sh; fi
 
+export TERM=xterm-256color 
+
 alias pi="ssh pi@192.168.178.39 -t tmux a" 
 alias mvim="/usr/local/bin/mvim" 
