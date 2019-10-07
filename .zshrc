@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="gentoo"
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -52,7 +52,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # -------- programs not found on linux with this line enabled. On OSX it works fine.
-# export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/frank/mutable_node_modules/bin:/Users/frank/development/flutter/bin"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -84,6 +84,11 @@ source $ZSH/oh-my-zsh.sh
 if [ -e /Users/frank/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/frank/.nix-profile/etc/profile.d/nix.sh; fi
 
 export TERM=xterm-256color 
+export GOPATH=$HOME/Code/golang
+export PATH=$PATH:$GOPATH/bin
 
 alias pi="ssh pi@192.168.178.39 -t tmux a" 
 alias mvim="/usr/local/bin/mvim" 
+export NIX_PATH=$HOME/.nix-defexpr/channels${NIX_PATH:+:}$NIX_PATH
+# $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
+
