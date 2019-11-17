@@ -1,7 +1,8 @@
-# This repo is deprecated: See nixos-config
+# My Dotfiles
 
-## My Dotfiles
+Create smylinks in home directory  
+```cd ~/ && ln -fs ~/Code/dotfiles/.vimrc .vimrc && ln -s ~/Code/dotfiles/.zshrc .zshrc```
 
-For VIM colors download <https://github.com/sickill/vim-monokai> and follow the instructions.  
-Create smylink in home directory  
-```cd ~/ && ln -s ~/Code/dotfiles/.vimrc .vimrc && ln -s ~/Code/dotfiles/.zshrc .zshrc```
+TODO
+- automatic link dotfiles
+- install all relevant packages + install all relevant tools (like oh-my-zsh)
