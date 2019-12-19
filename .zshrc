@@ -35,7 +35,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git z)
 # FZF configuration
 source $ZSH/oh-my-zsh.sh
 export FZF_DEFAULT_COMMAND='/usr/local/bin/rg --files --no-ignore --hidden --follow --glob "!.git/*"'
@@ -45,7 +45,7 @@ source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 source "/usr/local/opt/fzf/shell/completion.zsh"
 # User configuration
 # -------- programs not found on linux with this line enabled. On OSX it works fine.
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/mutable_node_modules/bin:$HOME/development/flutter/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:$HOME/.local/bin:/usr/sbin:/sbin:$HOME/mutable_node_modules/bin:$HOME/development/flutter/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
