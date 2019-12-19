@@ -3,11 +3,9 @@
     "typescript",
     "typescriptreact",
     "javascript",
-    "javascript.jsx"
+    "javascript.jsx",
+    "haskell"
   ],
-  "coc.preferences.hoverTarget": "echo",
-  "signature.target": "echo",
-
   "languageserver": {
     "haskell": {
       "command": "hie-wrapper",
@@ -15,7 +13,8 @@
       "filetypes": ["hs", "lhs", "haskell"],
       "initializationOptions": {
         "languageServerHaskell": {
-          "hlintOn": true
+          "hlintOn": true,
+	  "formattingProvider": "brittany"
         }
       }
     }
