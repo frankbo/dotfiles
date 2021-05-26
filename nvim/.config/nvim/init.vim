@@ -87,6 +87,9 @@ set number
 set ruler
 set wrap
 
+" Set tab to 2 spaces
+set tabstop=2 shiftwidth=2 expandtab
+
 " not for haskell
 let g:polyglot_disabled = ['haskell']
 
@@ -240,7 +243,7 @@ nnoremap <Leader>fr :Tags<CR>
 
 nnoremap <Leader>fa :Rg<CR>
 
-nnoremap <Leader>; :Buffers<CR>
+nnoremap ; :Buffers<CR>
 nnoremap <Leader>fg :GitFiles<CR>
 
 " Git 
@@ -286,7 +289,7 @@ nmap <silent> gr <Plug>(coc-references)
 " nerdtree find open with space + n, close with q
 "
 " Buffers
-" space + ;
+" Open buffers with ;
 " splint horizontally from buffer search ctrl + x
 " splint vertically from buffer search ctrl + v
 " open from fzf buffer inn new tab ctrl + t
