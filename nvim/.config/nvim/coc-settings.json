@@ -6,6 +6,7 @@
     "javascript.jsx",
     "haskell"
   ],
+  "coc.preferences.diagnostic.signOffset": 9999999,
   "languageserver": {
     "haskell": {
       "command": "hie-wrapper",
