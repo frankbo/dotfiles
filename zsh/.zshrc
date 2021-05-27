@@ -42,6 +42,7 @@ export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 alias v=nvim
 alias vim=nvim
 alias t="tmux -u"
+alias k=kubectl
 
 alias j14="export JAVA_HOME=`/usr/libexec/java_home -v 14`; java -version"
 alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version"
