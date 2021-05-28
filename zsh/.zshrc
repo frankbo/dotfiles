@@ -45,9 +45,15 @@ alias vim=nvim
 alias t="tmux -u"
 alias k=kubectl
 
+# Autocompletion for kubectl alias
+complete -F __start_kubectl k
+
 alias j14="export JAVA_HOME=`/usr/libexec/java_home -v 14`; java -version"
 alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version"
 
 eval "$(direnv hook zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# needs to be at the very end. Otherwise it won't work
+source <(kubectl completion zsh)
