@@ -5,7 +5,8 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="robbyrussell"
 
-plugins=(git z vi-mode)
+# zsh-kubectl-prompt needs to be cloned before see: https://github.com/superbrothers/zsh-kubectl-prompt#with-a-plugin-manager
+plugins=(git z vi-mode zsh-kubectl-prompt)
 # FZF configuration
 source $ZSH/oh-my-zsh.sh
 export FZF_DEFAULT_COMMAND='/usr/local/bin/rg --files --no-ignore --hidden --follow --glob "!.git/*"'
@@ -54,6 +55,9 @@ alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version"
 eval "$(direnv hook zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# define prompt for kubectl-prompt
+RPROMPT='%{$fg[cyan]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
 
 # needs to be at the very end. Otherwise it won't work
 source <(kubectl completion zsh)
