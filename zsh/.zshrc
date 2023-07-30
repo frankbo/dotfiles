@@ -19,7 +19,7 @@ source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.
 # User configuration
 
 # -------- programs not found on linux with this line enabled. On OSX it works fine.
-export PATH="/usr/local/bin:/usr/bin:/bin:$HOME/.local/bin:/usr/sbin:/sbin:$HOME/development/flutter/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:$HOME/.local/bin:/usr/sbin:/sbin:$HOME/development/flutter/bin:$HOME/.emacs.d/bin"
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
@@ -33,8 +33,11 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Set nix environment on every start.
-if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi
-export NIX_PATH=$HOME/.nix-defexpr/channels${NIX_PATH:+:}$NIX_PATH
+# # Nix
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+# End Nix
 
 export TERM=xterm-256color 
 export GOPATH=$HOME/go
