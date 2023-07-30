@@ -7,23 +7,24 @@ ZSH_THEME="robbyrussell"
 
 # zsh-kubectl-prompt needs to be cloned before see: https://github.com/superbrothers/zsh-kubectl-prompt#with-a-plugin-manager
 plugins=(git z vi-mode zsh-kubectl-prompt)
-# FZF configuration
 source $ZSH/oh-my-zsh.sh
-export FZF_DEFAULT_COMMAND='/usr/local/bin/rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+
+# FZF configuration
+export FZF_DEFAULT_COMMAND='/opt/homebrew/bin/rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-
-source "/usr/local/opt/fzf/shell/key-bindings.zsh"
-source "/usr/local/opt/fzf/shell/completion.zsh"
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-
+source "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
+source "/opt/homebrew/opt/fzf/shell/completion.zsh"
 # User configuration
 
 # -------- programs not found on linux with this line enabled. On OSX it works fine.
-export PATH="/usr/local/bin:/usr/bin:/bin:$HOME/.local/bin:/usr/sbin:/sbin:$HOME/development/flutter/bin:$HOME/.emacs.d/bin"
+export PATH="/opt/homebrew/bin:/usr/bin:/bin:$HOME/.local/bin:/usr/sbin:/sbin:$HOME/development/flutter/bin:$HOME/.emacs.d/bin"
+
+## NVM
 export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+## End NVM
+export JAVA_HOME="/opt/homebrew/Cellar/openjdk/20.0.1"
 
 # Android
 export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -31,6 +32,7 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+# End Android
 
 # Set nix environment on every start.
 # # Nix
@@ -51,9 +53,6 @@ alias k=kubectl
 
 # Autocompletion for kubectl alias
 complete -F __start_kubectl k
-
-alias j14="export JAVA_HOME=`/usr/libexec/java_home -v 14`; java -version"
-alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version"
 
 eval "$(direnv hook zsh)"
 
