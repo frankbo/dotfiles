@@ -17,7 +17,7 @@ source "/opt/homebrew/opt/fzf/shell/completion.zsh"
 # User configuration
 
 # -------- programs not found on linux with this line enabled. On OSX it works fine.
-export PATH="/opt/homebrew/bin:/usr/bin:/bin:$HOME/.local/bin:/usr/sbin:/sbin:$HOME/development/flutter/bin:$HOME/.emacs.d/bin"
+export PATH="/opt/homebrew/bin:/usr/bin:/bin:$HOME/.local/bin:/usr/sbin:/sbin:$HOME/development/flutter/bin:$HOME/.emacs.d/bin:$PATH"
 
 ## NVM
 export NVM_DIR="$HOME/.nvm"
@@ -64,7 +64,6 @@ source <(kubectl completion zsh)
 # Set nix environment on every start.
 # Nix
 if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
-  unset __ETC_PROFILE_NIX_SOURCED
   . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
 fi
 # End Nix
