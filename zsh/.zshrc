@@ -9,6 +9,9 @@ ZSH_THEME="robbyrussell"
 plugins=(git z vi-mode zsh-kubectl-prompt)
 source $ZSH/oh-my-zsh.sh
 
+# Add all relevant ssh keys
+grep -slR "PRIVATE" ~/.ssh | xargs ssh-add --apple-use-keychain
+
 # FZF configuration
 export FZF_DEFAULT_COMMAND='/opt/homebrew/bin/rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
@@ -17,7 +20,7 @@ source "/opt/homebrew/opt/fzf/shell/completion.zsh"
 # User configuration
 
 # -------- programs not found on linux with this line enabled. On OSX it works fine.
-export PATH="/opt/homebrew/bin:/usr/bin:/bin:$HOME/.local/bin:/usr/sbin:/sbin:$HOME/development/flutter/bin:$HOME/.emacs.d/bin:$PATH"
+export PATH="$PATH:/opt/homebrew/bin:/usr/bin:/bin:$HOME/.local/bin:/usr/sbin:/sbin:/usr/local/bin"
 
 ## NVM
 export NVM_DIR="$HOME/.nvm"
@@ -33,6 +36,14 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 # End Android
+
+# Flutter
+export PATH=$PATH:$HOME/development/flutter/bin
+# End Flutter
+
+# Docker
+export PATH=$PATH:$HOME/.docker/bin
+# End Docker
 
 # VSCode
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
