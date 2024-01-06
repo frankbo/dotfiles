@@ -9,9 +9,6 @@ ZSH_THEME="robbyrussell"
 plugins=(git z vi-mode zsh-kubectl-prompt)
 source $ZSH/oh-my-zsh.sh
 
-# Add all relevant ssh keys
-grep -slR "PRIVATE" ~/.ssh | xargs ssh-add --apple-use-keychain
-
 # FZF configuration
 export FZF_DEFAULT_COMMAND='/opt/homebrew/bin/rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
