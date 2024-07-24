@@ -48,8 +48,7 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 
 export TERM=xterm-256color 
 export GOPATH=$HOME/go
-export GOROOT=$(brew --prefix golang)/libexec
-export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
+export PATH=$PATH:$GOPATH/bin
 
 alias v=nvim
 alias vim=nvim
